@@ -1,0 +1,12 @@
+[Unit]
+Description=AdGuard Prometheus Exporter
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/znand/py_exporter
+ExecStart=/usr/bin/python3 /home/znand/py_exporter/py2_exporter.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
