@@ -13,14 +13,29 @@ pip install requests python-dotenv flask
 
 ### ✅Cara pakai:
 
-1. Edit .env dan isi sesuai dengan kredential dari AdGuard.
-1. Jalankan script: `python3 adguard_exporter.py` dan akses http://localhost:9617 untuk test. 
-2. Buat file .env di folder utama, lalu ```sudo cp .env.example .env``` 
+1. Salin .exampe.env ke .env kemudian isi sesuai dengan kredential dari AdGuard.
+```
+sudo cp .env.example .env
+sudo nano .env
+```
+
+2. Jalankan script: `python3 adguard_exporter.py` dan akses http://localhost:9617/metrics untuk test. 
+
+![ScriptTest](./assets/scriptest.png)
+
+Jika log menampilkan => ```"GET /metrics HTTP/1.1" 200 -``` ,maka script berjalan normal.
+
 4. Gunakan systemd service: `adguard_exporter.service`, jangan lupa update path workdir nya. 
 ```
 sudo cp adguard_exporter.service /etc/systemd/system/
 sudo systemctl daemon-reexec
 sudo systemctl enable --now adguard_exporter
+sudo systemctl start adguard_exporter
+```
+
+Periksa service running atau tidak:
+```
+sudo systemctl status adguard_exporter
 ```
 
 5. Tambahkan di prometheus.yml agar bisa discrape Prometheus.
@@ -32,9 +47,9 @@ scrape_configs:
       - targets: ['localhost:9617']
 ``` 
 6. Restart prometheus dan akses http://localhost:9090/targets, cek kembali apakah sudah up.
-7. Exporter siap digunakan di Grafana
+7. Tambahkan kembali datasource prometheus di web ui grafana kemudian gunakan grafana. 
 
-Kali aja ada yang mau donate hehe :)
-ETH: ```0x561fa822553e78b25be69e194d271aed5dd202e6```
+Kali aja ada orang baik yang mau support hehe :)
+ETH (ERC-20): ```0x561fa822553e78b25be69e194d271aed5dd202e6```
 
 ![Animated](./assets/animated.gif)
