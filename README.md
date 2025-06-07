@@ -1,6 +1,7 @@
 # 💡AdGuard Exporter
 
-![running script](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjY0aHZmb2h4N2d5Y2N6OTY0MDB2c3k4d2VkOTlodGY5MjhodGM2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11lxCeKo6cHkJy/giphy.gif)
+![running script](./assets/targets.png)
+
 Exporter Prometheus untuk mengambil statistik dari AdGuard Home dengan menggunakan Rest API dari AdGuard
 
 ### ⚠️ Requirements:
@@ -32,3 +33,8 @@ scrape_configs:
 ``` 
 6. Restart prometheus dan akses http://localhost:9090/targets, cek kembali apakah sudah up.
 7. Exporter siap digunakan di Grafana
+
+Kali aja ada yang mau donate hehe :)
+ETH: ```0x561fa822553e78b25be69e194d271aed5dd202e6```
+
+![Animated](./assets/animated.gif)
