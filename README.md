@@ -7,8 +7,9 @@ Exporter Prometheus untuk mengambil statistik dari AdGuard Home dengan menggunak
 ### ⚠️ Requirements:
 ``` 
 sudo apt update
-sudo apt install python3 python3-pip
-pip install requests python-dotenv flask
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ### ✅Cara pakai:
