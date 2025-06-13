@@ -3,6 +3,9 @@
 ![running script](./assets/targets.png)
 
 Exporter Prometheus untuk mengambil statistik dari AdGuard Home dengan menggunakan Rest API dari AdGuard
+### Clone repo:
+> git clone https://github.com/znand-dev/adguard_exporter.git
+> cd adguard_exporter
 
 ### ⚠️ Requirements:
 ``` 
