@@ -1,6 +1,6 @@
 # 💡AdGuard Exporter
 
-![running script](./assets/targets.png)
+![running script](./static/assets/targets.png)
 
 Exporter Prometheus untuk mengambil statistik dari AdGuard Home dengan menggunakan Rest API dari AdGuard
 ### Clone repo:
@@ -62,4 +62,4 @@ scrape_configs:
 Kali aja ada orang baik yang mau support hehe :)
 ETH (ERC-20): ```0x561fa822553e78b25be69e194d271aed5dd202e6```
 
-![Animated](./assets/animated.gif)
+![Animated](./static/assets/animated.gif)
