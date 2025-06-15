@@ -31,7 +31,7 @@ sudo nano .env
 
 2. Jalankan script: `python3 adguard_exporter.py` dan akses http://localhost:9617/metrics untuk test. 
 
-![ScriptTest](./assets/scriptest.png)
+![ScriptTest](./static/assets/scriptest.png)
 
 Jika log menampilkan => ```"GET /metrics HTTP/1.1" 200 -``` ,maka script berjalan normal.
 
