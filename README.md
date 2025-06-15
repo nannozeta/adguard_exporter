@@ -11,8 +11,13 @@ cd adguard_exporter
 ### ⚠️ Requirements:
 ``` 
 sudo apt update
-python3 -m venv venv
+```
+> Jika terkena proteksi PEP 688
+```
+python3 -m venv venv 
 source venv/bin/activate
+```
+```
 pip install -r requirements.txt
 ```
 
