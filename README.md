@@ -35,7 +35,7 @@ sudo nano .env
 
 Jika log menampilkan => ```"GET /metrics HTTP/1.1" 200 -``` ,maka script berjalan normal.
 
-4. Gunakan systemd service: `adguard_exporter.service`, jangan lupa update path workdir nya. 
+3. Gunakan systemd service: `adguard_exporter.service`, jangan lupa update path workdir nya. 
 ```
 sudo cp adguard_exporter.service /etc/systemd/system/
 sudo systemctl daemon-reexec
@@ -48,7 +48,7 @@ Periksa service running atau tidak:
 sudo systemctl status adguard_exporter
 ```
 
-5. Tambahkan di prometheus.yml agar bisa discrape Prometheus.
+4. Tambahkan di prometheus.yml agar bisa discrape Prometheus.
 
 ```
 scrape_configs:
@@ -56,8 +56,8 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:9617']
 ``` 
-6. Restart prometheus dan akses http://localhost:9090/targets, cek kembali apakah sudah up.
-7. Tambahkan kembali datasource prometheus di web ui grafana kemudian gunakan grafana. 
+5. Restart prometheus dan akses http://localhost:9090/targets, cek kembali apakah sudah up.
+6. Tambahkan kembali datasource prometheus di web ui grafana kemudian gunakan grafana. 
 
 Kali aja ada orang baik yang mau support hehe :)
 ETH (ERC-20): ```0x561fa822553e78b25be69e194d271aed5dd202e6```
